@@ -1,3 +1,3 @@
 test:
   override:
-    - php tests/*_test.php
+    - php tests/log_test.php
