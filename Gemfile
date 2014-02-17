@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'rspec', require: false
-gem 'capybara', require: false
