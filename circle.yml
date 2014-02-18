@@ -1,7 +1,0 @@
-machine:
-  php:
-    version: 5.4.6
-    
-test:
-  override:
-    - php ./tests/run.php --unit-tests
