@@ -16,4 +16,14 @@ class TestOfLogging extends UnitTestCase {
     $log2->message('Should write this to an other file');
     $this->assertTrue(file_exists(dirname(__FILE__).'/../temp/test2.log'));
   }
+  function testLogWriteMessageInFile() {
+    @unlink('/temp/test.log');
+    $log = new Log(dirname(__FILE__).'/../temp/test.log');
+    $log->message('Should write this to a new file');
+    $file_content = readfile(dirname(__FILE__).'/../temp/test.log');
+    $this->assertIdentical(
+      $file_content ,
+      "Should write this to a new file\n"
+      );
+  }
 }
