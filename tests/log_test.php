@@ -4,6 +4,8 @@ require_once('simpletest/autorun.php');
 require_once(dirname(__FILE__).'/../classes/log.php');
 
 class TestOfLogging extends UnitTestCase {
-  $log = new Log();
+  function testLogCreateNewFileOnFirstMessage() {
+    $log = new Log();
+  }
 }
 ?>
