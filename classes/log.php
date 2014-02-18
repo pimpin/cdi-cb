@@ -7,6 +7,7 @@ class Log {
   }
   function message($message)
   {
-    fopen($this->log_path, 'w+');
+    $log_file_stream = fopen($this->log_path, 'w+');
+    $log_file_stream.write($message);
   }
 }
