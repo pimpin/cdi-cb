@@ -5,7 +5,7 @@ require_once(dirname(__FILE__).'/../classes/log.php');
 
 class TestOfLogging extends UnitTestCase {
   function testLogCreateNewFileOnFirstMessage() {
-    $log = new Log();
+    $log = new Log('/temp/test.log');
   }
 }
 ?>
